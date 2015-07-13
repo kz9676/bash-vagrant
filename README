@@ -1,32 +1,56 @@
-[1] VERSION ------------------------------------------------------------------
+[1] DESCRIPTION --------------------------------------------------------------
 
-0.0.0.1
+Collection of Vagrant helper scripts and utilities.
 
-[2] AUTHORS ------------------------------------------------------------------
+[2] VERSION ------------------------------------------------------------------
 
+0.0.0.2
 
+[3] AUTHORS ------------------------------------------------------------------
 
-[3] FILES --------------------------------------------------------------------
+Kostya Zolotarov <kostya.zolotarov@gmail.com>
+
+[4] BACKGROUND ---------------------------------------------------------------
+
+I needed to automate my interaction with Vagrant. My choice fell on Bash for
+quick and easy scripting. To house my Vagrant helper scripts, I needed a
+library of re-usable code. 
+
+[5] FILES --------------------------------------------------------------------
 
 .
-├── [kostya.zolotarov           1 Jul 13 14:04]  ./AUTHORS
-├── [kostya.zolotarov           0 Jul 13 13:57]  ./BACKGROUND
+├── [kostya.zolotarov          46 Jul 13 15:21]  ./AUTHORS
+├── [kostya.zolotarov         178 Jul 13 14:28]  ./BACKGROUND
 ├── [kostya.zolotarov           0 Jul 13 13:57]  ./BUILD
-├── [kostya.zolotarov           0 Jul 13 14:04]  ./CHANGELOG
+├── [kostya.zolotarov         121 Jul 13 15:21]  ./CHANGELOG
 ├── [kostya.zolotarov           0 Jul 13 13:57]  ./DEFECTS
 ├── [kostya.zolotarov           0 Jul 13 13:57]  ./DEPENDENCIES
-├── [kostya.zolotarov           0 Jul 13 13:57]  ./DESCRIPTION
+├── [kostya.zolotarov          49 Jul 13 14:18]  ./DESCRIPTION
 ├── [kostya.zolotarov           0 Jul 13 13:57]  ./DESIGN
 ├── [kostya.zolotarov           0 Jul 13 13:57]  ./EXAMPLES
 ├── [kostya.zolotarov           0 Jul 13 13:57]  ./FEATURES
-├── [kostya.zolotarov           0 Jul 13 14:04]  ./FILES
+├── [kostya.zolotarov           0 Jul 13 15:21]  ./FILES
 ├── [kostya.zolotarov           0 Jul 13 13:57]  ./INSTALL
+├── [kostya.zolotarov        1981 Jul 13 15:20]  ./library.vagrant.sh
 ├── [kostya.zolotarov           0 Jul 13 13:57]  ./LICENSE
+├── [kostya.zolotarov        1849 Jul 13 14:28]  ./README
 ├── [kostya.zolotarov           0 Jul 13 13:57]  ./REQUIREMENTS
 ├── [kostya.zolotarov           0 Jul 13 13:57]  ./SOURCES
-├── [kostya.zolotarov           0 Jul 13 13:57]  ./TASKS
+├── [kostya.zolotarov           0 Jul 13 14:04]  ./TASKS
 ├── [kostya.zolotarov           0 Jul 13 13:57]  ./TEST
-└── [kostya.zolotarov           0 Jul 13 13:57]  ./VERSION
+├── [kostya.zolotarov           8 Jul 13 14:04]  ./VERSION
 
-0 directories, 18 files
+0 directories, 20 files
+
+[6] CHANGELOG ----------------------------------------------------------------
+
+* ab89d36 
+|  2015-07-13 
+|  Kostya Zolotarov 
+|  Added 'if_vagrant_box_exists()' function (HEAD, origin/development, development) 
+|  
+* 452e1b2 
+   2015-07-13 
+   Kostya Zolotarov 
+   Initialized the repository (origin/master, master) 
 

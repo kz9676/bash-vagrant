@@ -1,0 +1,9 @@
+* ab89d36 
+|  2015-07-13 
+|  Kostya Zolotarov 
+|  Added 'if_vagrant_box_exists()' function (HEAD, origin/development, development) 
+|  
+* 452e1b2 
+   2015-07-13 
+   Kostya Zolotarov 
+   Initialized the repository (origin/master, master) 
