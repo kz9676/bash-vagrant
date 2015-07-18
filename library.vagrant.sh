@@ -29,8 +29,14 @@ SOFTWARE.
 
 '
 
+file_name='library.vagrant.sh'
+
 error_none=0
-error_vagrant_box_not_found=1
+error_vagrant_box_name_not_set=1
+error_vagrant_box_not_found=2
+
+text_vagrant_box_name_not_set="Vagrant box name not set"
+text_vagrant_box_not_found="Vagrant box not found"
 
 # BACKGROUND:
 #
@@ -46,13 +52,22 @@ error_vagrant_box_not_found=1
 #   added with 'vagrant box add <box name>' command.
 #
 if_vagrant_box_exists() {
+
     vagrant_box_name=$1
+    if [ $vagrant_box_name -z ];
+    then
+        printf "$file_name: $text_vagrant_box_name_not_set\n" >&2
+        return $error_vagrant_box_name_not_set 
+    fi 
+
     vagrant box list $vagrant_box_name
     if [ $? -ne 0 ];
     then
-        exit $error_vagrant_box_not_found
+        printf "$file_name: $text_vagrant_box_not_found"
+        return $error_vagrant_box_not_found
     else  
-        exit $error_none
+        return $error_none
     fi 
+
 }
 
