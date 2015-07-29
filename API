@@ -1,0 +1,32 @@
+ FUNCTION:
+
+   is_vagrant_box_installed
+
+ BACKGROUND:
+
+   If Vagrant box you are trying to add with 'vagrnat box add <box name>'
+   already exists, Vagrant will throw the following error - "The box
+   you are attempting to add already exists. Remove it before adding
+   it again or add it with the '--force' flag."
+
+ DESCRIPTION:
+
+   This function returns 0 if a particular Vagrant box already exists 
+   or, in other words, the box with the same name has previously been 
+   added with 'vagrant box add <box name>' command.
+
+ EXAMPLES:
+
+   1) Invocation in Bash terminal
+
+       $ source library.vagrant.sh
+       $ is_vagrant_box_installed centos-6.5-amd64-box
+
+   2) Inclusion in Bash script 
+
+       #!/usr/bin/env bash 
+       . library.vagrant.sh
+       vagrant_box_name=$1
+       if [ is_vagrant_box_installed $vagrant_box_name ]; then 
+           # Your code here... 
+       fi

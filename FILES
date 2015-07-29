@@ -1,33 +1,24 @@
 .
-├── [kostya.zolotarov          46 Jul 13 15:21]  ./AUTHORS
-├── [kostya.zolotarov          46 Jul 13 14:07]  ./authors -> /home/kostya.zolotarov/Programs/srcmod_authors
-├── [kostya.zolotarov         178 Jul 13 14:28]  ./BACKGROUND
-├── [kostya.zolotarov           0 Jul 13 13:57]  ./BUILD
-├── [kostya.zolotarov          44 Jul 13 14:07]  ./build -> /home/kostya.zolotarov/Programs/srcmod_build
-├── [kostya.zolotarov         121 Jul 13 15:21]  ./CHANGELOG
-├── [kostya.zolotarov          48 Jul 13 14:07]  ./changelog -> /home/kostya.zolotarov/Programs/srcmod_changelog
-├── [kostya.zolotarov           0 Jul 13 13:57]  ./DEFECTS
-├── [kostya.zolotarov           0 Jul 13 13:57]  ./DEPENDENCIES
-├── [kostya.zolotarov          49 Jul 13 14:18]  ./DESCRIPTION
-├── [kostya.zolotarov           0 Jul 13 13:57]  ./DESIGN
-├── [kostya.zolotarov           0 Jul 13 13:57]  ./EXAMPLES
-├── [kostya.zolotarov           0 Jul 13 13:57]  ./FEATURES
-├── [kostya.zolotarov           0 Jul 13 15:21]  ./FILES
-├── [kostya.zolotarov          44 Jul 13 14:07]  ./files -> /home/kostya.zolotarov/Programs/srcmod_files
-├── [kostya.zolotarov           0 Jul 13 13:57]  ./INSTALL
-├── [kostya.zolotarov          46 Jul 13 14:07]  ./install -> /home/kostya.zolotarov/Programs/srcmod_install
-├── [kostya.zolotarov        1981 Jul 13 15:20]  ./library.vagrant.sh
-├── [kostya.zolotarov           0 Jul 13 13:57]  ./LICENSE
-├── [kostya.zolotarov        1849 Jul 13 14:28]  ./README
-├── [kostya.zolotarov          45 Jul 13 14:07]  ./readme -> /home/kostya.zolotarov/Programs/srcmod_readme
-├── [kostya.zolotarov           0 Jul 13 13:57]  ./REQUIREMENTS
-├── [kostya.zolotarov          44 Jul 13 14:07]  ./setup -> /home/kostya.zolotarov/Programs/srcmod_setup
-├── [kostya.zolotarov           0 Jul 13 13:57]  ./SOURCES
-├── [kostya.zolotarov           0 Jul 13 14:04]  ./TASKS
-├── [kostya.zolotarov          44 Jul 13 14:07]  ./tasks -> /home/kostya.zolotarov/Programs/srcmod_tasks
-├── [kostya.zolotarov           0 Jul 13 13:57]  ./TEST
-├── [kostya.zolotarov          48 Jul 13 14:07]  ./uninstall -> /home/kostya.zolotarov/Programs/srcmod_uninstall
-├── [kostya.zolotarov           8 Jul 13 14:04]  ./VERSION
-└── [kostya.zolotarov          46 Jul 13 14:07]  ./version -> /home/kostya.zolotarov/Programs/srcmod_version
+|--  ./API
+|--  ./AUTHORS
+|--  ./BACKGROUND
+|--  ./BUILD
+|--  ./CHANGELOG
+|--  ./DEFECTS
+|--  ./DEPENDENCIES
+|--  ./DESCRIPTION
+|--  ./DESIGN
+|--  ./EXAMPLES
+|--  ./FEATURES
+|--  ./FILES
+|--  ./INSTALL
+|--  ./library.vagrant.sh
+|--  ./LICENSE
+|--  ./README
+|--  ./REQUIREMENTS
+|--  ./SOURCES
+|--  ./TASKS
+|--  ./TEST
+\--  ./VERSION
 
-0 directories, 30 files
+21 files

@@ -1,0 +1,8 @@
+1) Invocation in Bash terminal
+
+    $ source library.vagrant.sh
+
+2) Inclusion in Bash script 
+
+    #!/usr/bin/env bash 
+    . library.vagrant.sh

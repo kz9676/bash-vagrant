@@ -29,15 +29,29 @@ SOFTWARE.
 
 '
 
+# https://github.com/kz9676/library.log.sh
+. library.log.sh
+
+# Script file name has to be hardcoded due to the fact that the script 
+# is intended for inclusion and as such automatic resolution with 
+# shell directive ${PWD##*/} would produce the name of host script instead.
 file_name='library.vagrant.sh'
 
+# Exit codes 
 error_none=0
 error_vagrant_box_name_not_set=1
-error_vagrant_box_not_found=2
+error_vagrant_box_not_installed=2
+error_vagrant_box_installed=$error_none
 
+# Exit messages
 text_vagrant_box_name_not_set="Vagrant box name not set"
-text_vagrant_box_not_found="Vagrant box not found"
+text_vagrant_box_not_installed="Vagrant box %s not installed"
+text_vagrant_box_installed="Vagrant box %s found installed"
 
+# FUNCTION:
+#
+#   is_vagrant_box_installed
+#
 # BACKGROUND:
 #
 #   If Vagrant box you are trying to add with 'vagrnat box add <box name>'
@@ -51,22 +65,45 @@ text_vagrant_box_not_found="Vagrant box not found"
 #   or, in other words, the box with the same name has previously been 
 #   added with 'vagrant box add <box name>' command.
 #
-if_vagrant_box_exists() {
+# EXAMPLES:
+#
+#   1) Invocation in Bash terminal
+#
+#       $ source library.vagrant.sh
+#       $ is_vagrant_box_installed centos-6.5-amd64-box
+#
+#   2) Inclusion in Bash script 
+#
+#       #!/usr/bin/env bash 
+#       . library.vagrant.sh
+#       vagrant_box_name=$1
+#       if [ is_vagrant_box_installed $vagrant_box_name ]; then 
+#           # Your code here... 
+#       fi
+#
+is_vagrant_box_installed() {
 
     vagrant_box_name=$1
-    if [ $vagrant_box_name -z ];
+
+    if test -z $vagrant_box_name;
     then
-        printf "$file_name: $text_vagrant_box_name_not_set\n" >&2
+        printf "$error $file_name - $text_vagrant_box_name_not_set\n" >&2
         return $error_vagrant_box_name_not_set 
     fi 
 
-    vagrant box list $vagrant_box_name
-    if [ $? -ne 0 ];
+    result=`vagrant box list "$vagrant_box_name"`
+
+    # Sadly, `vagrant box list` does not implement exit codes.  
+    # No matter if a specified vagrant box is installed or not, 
+    # the exit code is always 0. We have to rely on parsing vagrant 
+    # exit text messages, to achieve desired degree of automation.
+    if [ "$result" == 'There are no installed boxes! Use `vagrant box add` to add some.' ];
     then
-        printf "$file_name: $text_vagrant_box_not_found"
-        return $error_vagrant_box_not_found
-    else  
-        return $error_none
+        printf "$error $file_name - $text_vagrant_box_not_installed\n" "$vagrant_box_name" >&2
+        return $error_vagrant_box_not_installed
+    else 
+        printf "$success $file_name - $text_vagrant_box_installed\n" "$vagrant_box_name" >&2 
+        return $error_vagrant_box_installed
     fi 
 
 }
